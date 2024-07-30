@@ -1,5 +1,5 @@
 body {
-    background-color: black;
+    background-color: blueviolet;
 }
 
 .q-box {
@@ -10,3 +10,18 @@ margin: 100px auto 0;
 border-radius: 5px;
 padding: 20px;
 }
+
+.qbtn {
+    background-color: white;
+    color: hsl(252, 54%, 61%);
+    font-weight: solid;
+    padding: 20px;
+    text-align: left;
+    border-radius: 10px;
+    width: 100%;
+    border: 5px solid #000;
+    }
+
+     .qbtn:hover{
+    background-color: blueviolet;
+    }
