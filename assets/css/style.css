@@ -25,3 +25,13 @@ padding: 20px;
      .qbtn:hover{
     background-color: blueviolet;
     }
+
+    #next-qbtn {
+    background-color: white;
+    color: hsl(252, 54%, 61%);
+    font-weight: solid;
+    padding: 10px;
+    width: 80px;
+    border-radius: 10px;
+    border: 5px solid #000;
+    }
