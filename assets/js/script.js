@@ -53,4 +53,12 @@ const questions = [
             { text: "Harry Potter and Half Blood Prince", correct: false},
         ]
     }
-] 
+];
+
+const questionElement = document.getElementById("question");
+const answerButton = document.getElementById("answer-button");
+const nextButton = document.getElementById("next-qbtn");
+
+function buildQuiz(){}
+
+submitButton.addEventListener('click', showResults);
