@@ -59,6 +59,19 @@ const questionElement = document.getElementById("question");
 const answerButton = document.getElementById("answer-button");
 const nextButton = document.getElementById("next-qbtn");
 
-function buildQuiz(){}
+function buildQuiz(){
+    let currentQuestionIndex = 0;
+let score = 0;
+}
+
+currentQuestionIndex = 0;
+score = 0;
+nextButton.innerHTML = "next-qbtn";
+showQuestion();
+
+function showQuestion() {
+    
+}
+
 
 submitButton.addEventListener('click', showResults);
