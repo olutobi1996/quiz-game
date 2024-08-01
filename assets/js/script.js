@@ -70,8 +70,15 @@ nextButton.innerHTML = "next-qbtn";
 showQuestion();
 
 function showQuestion() {
+    let currentquestion = questions [currentQuestionIndex]
+    let questionNo = currentQuestionIndex + 1;
+    questionElement.innerHTML = questionNo + "." + currentQuestion.
+    question;
     
 }
 
+submitButton.onclick = function(){
+    showResults(questions, answerButton);
+}
 
 submitButton.addEventListener('click', showResults);
