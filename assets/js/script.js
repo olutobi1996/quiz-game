@@ -56,8 +56,9 @@ const questions = [
 ];
 
 const questionElement = document.getElementById("question");
-const answerButton = document.getElementById("answer-button");
+const answerButton = document.getElementsByClassName("qbtn");
 const nextButton = document.getElementById("next-qbtn");
+const submitButton = document.getElementById("submit")
 
 function buildQuiz(){
     let currentQuestionIndex = 0;
@@ -70,15 +71,19 @@ nextButton.innerHTML = "next-qbtn";
 showQuestion();
 
 function showQuestion() {
-    let currentquestion = questions [currentQuestionIndex]
+    let currentQuestion = questions [currentQuestionIndex]
     let questionNo = currentQuestionIndex + 1;
     questionElement.innerHTML = questionNo + "." + currentQuestion.
     question;
+
+    for(let i = 0; i <= answerButton.length; i++){
+        answerButton[i].innerHTML = currentQuestion.answers[i].text
+    }
     
 }
 
-submitButton.onclick = function(){
-    showResults(questions, answerButton);
+function showResults(){
+    
 }
 
 submitButton.addEventListener('click', showResults);
