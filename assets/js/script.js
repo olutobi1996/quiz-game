@@ -94,19 +94,14 @@ function showQuestion() {
         });
     }
 
-    function checkAnswer() { 
-        let userAnswer = parseInt (document.getElementById("answer-box").value);
-        let calculatedAnswer = calculateCorrectAnswer();
-        let isCorrect = userAnswer === calculatedAnswer [0];
-        
-        if (isCorrect) {
-            alert("Hey you go it right! :D");
-            incrementScore();
-        } else {
-            alert(`awww...you answered ${userAnswer}. The correct answer was ${calculatedAnswer[0]}!`);
-            incrementWrongAnswer();
-        }
-        
-        runGame(calculatedAnswer[1]);
-        
-        }
+  function selectAnswer(e){
+    const selectedQbtn = e.target;
+    const isCorrect = selectedQbtn.dataset.correct === "true";
+    if (isCorrect) {
+        selectedQbtn.classList.add("Correct");
+    } else {
+        selectedQbtn.classList.add("incorrect");
+    }
+  }
+
+  startQuiz();

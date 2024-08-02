@@ -35,3 +35,12 @@ padding: 20px;
     border-radius: 10px;
     border: 5px solid #000;
     }
+
+.correct {
+background-color: #ff0000;
+}
+
+
+.incorrect {
+    background-color: #7cc558;
+}
