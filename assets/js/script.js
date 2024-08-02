@@ -87,8 +87,26 @@ function showQuestion() {
             button.innerHTML = answer.text;
             button.classList.add("qbtn")
             answerButton.appendChild("button");
-            
+            if (answer.correct) {
+                button.dataset.correct = answer.correct;  
+            }
+            submitButton.addEventListener('click', showResults);
         });
     }
 
-submitButton.addEventListener('click', showResults);
+    function checkAnswer() { 
+        let userAnswer = parseInt (document.getElementById("answer-box").value);
+        let calculatedAnswer = calculateCorrectAnswer();
+        let isCorrect = userAnswer === calculatedAnswer [0];
+        
+        if (isCorrect) {
+            alert("Hey you go it right! :D");
+            incrementScore();
+        } else {
+            alert(`awww...you answered ${userAnswer}. The correct answer was ${calculatedAnswer[0]}!`);
+            incrementWrongAnswer();
+        }
+        
+        runGame(calculatedAnswer[1]);
+        
+        }
