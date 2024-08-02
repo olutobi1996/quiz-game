@@ -79,11 +79,16 @@ function showQuestion() {
     for(let i = 0; i <= answerButton.length; i++){
         answerButton[i].innerHTML = currentQuestion.answers[i].text
     }
-    
 }
 
-function showResults(){
-    
-}
+    function showResults(){
+        currentQuestion.answers.forEach(answer => {
+            const button = document.createElement("button");
+            button.innerHTML = answer.text;
+            button.classList.add("qbtn")
+            answerButton.appendChild("button");
+            
+        });
+    }
 
 submitButton.addEventListener('click', showResults);
