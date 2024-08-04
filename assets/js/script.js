@@ -56,52 +56,62 @@ const questions = [
 ];
 
 const questionElement = document.getElementById("question");
-const answerButton = document.getElementsByClassName("qbtn");
-const nextButton = document.getElementById("next-qbtn");
-const submitButton = document.getElementById("submit")
+const answerButton = document.getElementsByClassName("answer-buttons");
+const nextButton = document.getElementById("next");
 
-function buildQuiz(){
-    let currentQuestionIndex = 0;
+
+let currentQuestionIndex = 0;
 let score = 0;
-}
 
+function startQuiz(){
 currentQuestionIndex = 0;
 score = 0;
-nextButton.innerHTML = "next-qbtn";
+nextButton.innerHTML = "next";
 showQuestion();
+}
 
 function showQuestion() {
+    resetState();
     let currentQuestion = questions [currentQuestionIndex]
     let questionNo = currentQuestionIndex + 1;
     questionElement.innerHTML = questionNo + "." + currentQuestion.
     question;
 
-    for(let i = 0; i <= answerButton.length; i++){
-        answerButton[i].innerHTML = currentQuestion.answers[i].text
-    }
-}
+    currentQuestion.answers.forEach(answer => {
+        const button = document.createElement("button");
+        button.innerHTML = answer.text;
+        button.classList.add("btn");
+        answerButton.appendChild(button);
+        if (answer.correct){
+            button.dataset.correct = answer.correct;
+        }
+        button.addEventListener("click", selectAnswer);
+    }); }
 
-    function showResults(){
-        currentQuestion.answers.forEach(answer => {
-            const button = document.createElement("button");
-            button.innerHTML = answer.text;
-            button.classList.add("qbtn")
-            answerButton.appendChild("button");
-            if (answer.correct) {
-                button.dataset.correct = answer.correct;  
+    function resetState(){
+        nextButton.style.display = "none";
+        while(answerButtons.firstChild) {
+            answerButtons.removeChild(answerButtons.firstChild);
+        }
+    }
+
+    function selectAnswer(e){
+        const selectedBtn = e.target;
+        const isCorrect = selectedBtn.dataset.correct === "true";
+        if(isCorrect) {
+            selectedBtn.classList.add("correct");
+        } else {
+            selectedBtn.classList.add("incorrect");
+        }
+        Array.from(answerButtons.children).forEach(button => {
+            if(button.dataset.correct === "true"){
+                button.classList.add("correct");
             }
-            submitButton.addEventListener('click', showResults);
+            button.disabled = "true";
         });
+        nextButton.style.display = "block";
     }
 
-  function selectAnswer(e){
-    const selectedQbtn = e.target;
-    const isCorrect = selectedQbtn.dataset.correct === "true";
-    if (isCorrect) {
-        selectedQbtn.classList.add("Correct");
-    } else {
-        selectedQbtn.classList.add("incorrect");
-    }
-  }
 
-  startQuiz();
+
+startQuiz();
