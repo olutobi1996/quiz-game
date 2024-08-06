@@ -19,6 +19,7 @@ padding: 20px;
     border-radius: 10px;
     width: 100%;
     border: 5px solid #000;
+    cursor: pointer;
     }
 
      .btn:hover{
@@ -37,10 +38,10 @@ padding: 20px;
     }
 
 .correct {
-background-color: #ff0000;
+background-color: #7cc558;
 }
 
 
 .incorrect {
-    background-color: #7cc558;
+    background-color: #ff0000;
 }
