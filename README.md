@@ -1,16 +1,17 @@
 # Quiz Game
  Quiz game is a site that hopes to demonstrate how pure JavaScript works in a real-world context. The site will be targeted toward people who not only love to implement more advanced JavaScript concepts but also general knowledge questions. Quiz Game is a fully responsive JavaScript Quiz Game that will allow users to challenge their general knowledge. It does this by asking the user of the website 6 random general knowledge quiz questions.
+
+ 
 ![Screenshot-pure-souls](https://github.com/olutobi1996/pure-souls/assets/169264552/9eca13f0-275d-4ec3-8659-40f1adb80f9b)
 
 ### Existing Features
 
-- __Navigation Bar__
+The Quiz Game Logo and Heading
 
-  - Featured at the top of the website, the full responsive navigation bar includes links to the Home, In-Depth Sign-Up, Video and all these features are below each other on the same page to allow for easy navigation. 
-  - This section will allow the user to easily navigate from each different sections of the page across all devices without having to revert back to the previous page via the ‘back’ button. It is also use if you want to just view one section without having to read the other sections of the website. The navigation bar also includes text under the title "Pure Souls" welcoming people to the yoga and meditation website.
-  - The navigation bar uses css styling to center element and when viewed on other applications will adapt to the width and height of technology used.
+Featured at the top of the page, the Quiz Game logo and heading is easy to see for the user. Upon viewing the page, the user will be able to see the name of the game.
 
-![navigation-bar](https://github.com/olutobi1996/pure-souls/assets/169264552/5d3a9c56-7036-49be-8893-e6e40e3e3db9)
+![image](https://github.com/user-attachments/assets/b99cbec7-5ef1-472c-a2d8-165a258b578a)
+
 
 - __The landing page image__
 
