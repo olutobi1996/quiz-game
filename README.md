@@ -1,6 +1,5 @@
-# Pure Souls
-Pure Souls is a website that hopes to inspire help and keep people mentally and physically healthy. It does this by organizing group yoga and meditation classes on a frequent basis in Brighton, England. The site will be targeted toward people who are looking for a way to de-stress, un-uncondition there minds and keep there body, mind and soul healthy and liberated from lifes troubles. Pure Souls will be useful for people to see exactly when, where and how they meditate and yoga and what classes are fit for them. 
-
+# Quiz Game
+ Quiz game is a site that hopes to demonstrate how pure JavaScript works in a real-world context. The site will be targeted toward people who not only love to implement more advanced JavaScript concepts but also general knowledge questions. Quiz Game is a fully responsive JavaScript Quiz Game that will allow users to challenge their general knowledge. It does this by asking the user of the website 6 random general knowledge quiz questions.
 ![Screenshot-pure-souls](https://github.com/olutobi1996/pure-souls/assets/169264552/9eca13f0-275d-4ec3-8659-40f1adb80f9b)
 
 ### Existing Features
